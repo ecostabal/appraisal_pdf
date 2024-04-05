@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  }
+  
+  .page {
+    position: relative;
+    height: 297mm;
+    width: 210mm;
+    margin: 2em auto;
+    padding: calc(1cm + 0.5cm);
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    background: white;
+  }
+  
+  @media screen {
+    .page::after {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: calc(100% - 1cm);
+      height: calc(100% - 1cm);
+      margin: 0.5cm;
+      outline: 1px dashed gray;
+      pointer-events: none;
+      z-index: 9999;
+    }
+  }
+  
+  
