@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '../src/styles/fonts.css';
 
 @media print {
     @page {
@@ -28,7 +29,7 @@
       width: calc(100% - 1cm);
       height: calc(100% - 1cm);
       margin: 0.5cm;
-      outline: 1px dashed gray;
+      outline: 1px dashed white;
       pointer-events: none;
       z-index: 9999;
     }
